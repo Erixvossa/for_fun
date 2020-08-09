@@ -8,3 +8,13 @@ function sumTo(n) {
 }
 
 console.log(sumTo(5));
+
+//2 задача. Исправить фунцию//
+function repair() {
+    for (let i = 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    }
+}
+repair();

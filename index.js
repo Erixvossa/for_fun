@@ -52,3 +52,17 @@ const isPalindrome = str => {
 
 isPalindrome('topot');
 isPalindrome('topop');
+
+//6 задача.//
+function anagram(a, b) {
+    let arrA = a.toLowerCase().split('').sort().join('');
+    let arrB = b.toLowerCase().split('').sort().join('');
+    if (arrA === arrB) {
+        console.log('true');
+    }
+    else {
+        console.log('false');
+    }
+}
+anagram('pam', 'pam');
+anagram('pam', 'param');

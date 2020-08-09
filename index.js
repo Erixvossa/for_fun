@@ -43,4 +43,12 @@ function curry(fn) {
 
 const sum2 = curry(_sum2);
 
-console.log(sum2(20)(5)); 
+console.log(sum2(20)(5));
+
+//5 задача. метод аналогичен 1й задаче.//
+const isPalindrome = str => {
+    console.log(str === str.split('').reverse().join(''));
+}
+
+isPalindrome('topot');
+isPalindrome('topop');

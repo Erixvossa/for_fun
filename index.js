@@ -24,3 +24,23 @@ function reverse(str) {
     console.log(str.split('').reverse().join(''));
 }
 reverse('soon');
+
+//4 задача. Почитал про каррирование. Нихрена не понял, но видоизменил функцию, которую нашел//
+const _sum2 = (x, y) => x + y;
+
+function curry(fn) {
+    const N = fn.length;
+    function innerFn(n, args) {
+        return function actualInnerFn(a) {
+            if(n <= 1) {
+                return fn(...args, a);
+            }
+            return innerFn(n - 1, [...args, a]);
+        }
+    }
+    return innerFn(N, [])
+}
+
+const sum2 = curry(_sum2);
+
+console.log(sum2(20)(5)); 

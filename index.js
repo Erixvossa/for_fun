@@ -1,4 +1,5 @@
 //1. Задача. Посчитать сумму чисел до n//
+// Выполнено верно, но можно также решить через рекурсию
 function sumTo(n) {
     let sum = 0;
     for (let i = 1; i <= n; i++) {
@@ -26,9 +27,13 @@ function reverse(str) {
 reverse('soon');
 
 //4 задача. Почитал про каррирование. Нихрена не понял, но видоизменил функцию, которую нашел//
+// Здесь не обязательно использовать именно каррирование.
+// Достаточно проверки на количество аргументов.
+// Если один, то вернуть функцию, которая примет второй. Если два, то сложить их. 
 const _sum2 = (x, y) => x + y;
 
 function curry(fn) {
+    // не забывай про код стайл и отступы.
     const N = fn.length;
     function innerFn(n, args) {
         return function actualInnerFn(a) {
@@ -46,6 +51,7 @@ const sum2 = curry(_sum2);
 console.log(sum2(20)(5));
 
 //5 задача. метод аналогичен 1й задаче.//
+// Только return нет)
 const isPalindrome = str => {
     console.log(str === str.split('').reverse().join(''));
 }
@@ -54,6 +60,7 @@ isPalindrome('topot');
 isPalindrome('topop');
 
 //6 задача.//
+// Верно, но кодстайл...
 function anagram(a, b) {
     let arrA = a.toLowerCase().split('').sort().join('');
     let arrB = b.toLowerCase().split('').sort().join('');
